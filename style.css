@@ -190,23 +190,60 @@ footer{
 
 /* Remove blur after click */
 
-.hide{
-    display:none;
+.age-popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+
+    background:rgba(0,0,0,0.7);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
 }
 
-.hide ~ header,
-.hide ~ .hero,
-.hide ~ .cards,
-.hide ~ footer{
-    filter: blur(0px);
+/* Center box */
+
+.popup-box{
+    width:350px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+
+    text-align:center;
+
+    animation:rabbitZoom 1s ease;
 }
 
-/* Rabbit animation */
+/* Big rabbit */
+
+.big-rabbit{
+    font-size:120px;
+    margin-bottom:20px;
+}
+
+/* Button */
+
+.popup-box button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:black;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* Animation */
 
 @keyframes rabbitZoom{
 
     0%{
-        transform:scale(5);
+        transform:scale(4);
         opacity:0;
     }
 
