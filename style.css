@@ -109,7 +109,7 @@ footer{
 }
 
 
-<!--         RABBIT ANIMATION -->
+
   /* Rabbit Logo Animation */
 
 .logo{
@@ -131,6 +131,88 @@ footer{
     100%{
         transform: scale(1) translateY(0);
         opacity: 1;
+    }
+
+}
+/* Blur website at start */
+
+body{
+    overflow-x:hidden;
+}
+
+header,
+.hero,
+.cards,
+footer{
+    filter: blur(8px);
+    transition: 1s;
+}
+
+/* Popup */
+
+.age-popup{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.7);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.popup-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+
+    animation:rabbitZoom 1s ease;
+}
+
+.big-rabbit{
+    font-size:120px;
+}
+
+.popup-box button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:black;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* Remove blur after click */
+
+.hide{
+    display:none;
+}
+
+.hide ~ header,
+.hide ~ .hero,
+.hide ~ .cards,
+.hide ~ footer{
+    filter: blur(0px);
+}
+
+/* Rabbit animation */
+
+@keyframes rabbitZoom{
+
+    0%{
+        transform:scale(5);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
     }
 
 }
