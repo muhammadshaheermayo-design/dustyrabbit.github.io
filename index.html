@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +9,24 @@
 
 <body>
 
+<!-- POPUP -->
+<div class="age-popup" id="popup">
+
+  <div class="popup-box">
+
+    <div class="big-rabbit">🐰</div>
+
+    <h2>Are you 18 or older?</h2>
+
+    <button onclick="enterSite()">Yes Enter</button>
+
+  </div>
+
+</div>
+
 <header>
   <div class="logo">🐰 DustyRabbit</div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="gifs.html">GIFs</a>
@@ -27,6 +42,7 @@
 </section>
 
 <section class="cards">
+
   <div class="card">
     <h2>GIFs</h2>
     <p>Funny animated memes</p>
@@ -44,21 +60,22 @@
     <p>Meme audio clips</p>
     <a href="sounds.html">Open</a>
   </div>
-</section>
-<!-- id indentification -->
-  <div class="age-popup" id="popup">
-  <div class="popup-box">
-    <div class="big-rabbit">🐰</div>
-    <h2>Are you 18 or older?</h2>
-    <button onclick="enterSite()">Yes Enter</button>
-  </div>
-</div>
 
-<script>
-function enterSite(){
-    document.getElementById("popup").classList.add("hide");
-}
-</script>
+</section>
+
 <footer>
   © 2026 DustyRabbit
 </footer>
+
+<script>
+
+function enterSite(){
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>
