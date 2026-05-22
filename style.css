@@ -1,3 +1,4 @@
+```css id="f4m2qx"
 /* RESET */
 *{
   margin:0;
@@ -110,21 +111,12 @@ footer{
 
 /* BLUR WEBSITE */
 
-header,
-.hero,
-.cards,
-footer{
+.blurred header,
+.blurred .hero,
+.blurred .cards,
+.blurred footer{
   filter:blur(8px);
   transition:0.5s;
-}
-
-/* REMOVE BLUR AFTER ENTER */
-
-body.active header,
-body.active .hero,
-body.active .cards,
-body.active footer{
-  filter:blur(0px);
 }
 
 /* POPUP */
@@ -210,3 +202,4 @@ body.active footer{
   }
 
 }
+```
