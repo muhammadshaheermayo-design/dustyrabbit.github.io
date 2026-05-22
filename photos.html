@@ -1,1 +1,43 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <title>Meme Photos - DustyRabbit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">DustyRabbit</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="gifs.html">GIFs</a>
+      <a href="photos.html">Photos</a>
+      <a href="sounds.html">Sounds</a>
+      <a href="about.html">About Us</a>
+      <button class="theme-btn" id="themeBtn">🌙</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="section-head card compact">
+      <h1>Meme Photos</h1>
+      <p>A clean grid of funny meme images made for quick sharing.</p>
+    </section>
+
+    <section class="tabbar">
+      <a class="tab" href="gifs.html">GIF Stickers</a>
+      <a class="tab active" href="photos.html">Meme Photos</a>
+      <a class="tab" href="sounds.html">Meme Sounds</a>
+    </section>
+
+    <section class="grid gallery" id="gallery"></section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>window.PAGE='photos';</script>
+</body>
+</html>
