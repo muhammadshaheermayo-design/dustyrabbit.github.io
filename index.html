@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#111827" />
-  <title>DustyRabbit</title>
+  <title>Meme Photos - DustyRabbit</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -22,36 +23,21 @@
   </header>
 
   <main class="page">
-    <section class="hero card">
-      <div class="hero-copy">
-        <span class="pill">WhatsApp Meme Hub</span>
-        <h1>Download and share GIF stickers, meme photos, and meme sounds.</h1>
-        <p>Fast, mobile-friendly, and built for iOS and Android users who love memes.</p>
-        <div class="actions">
-          <a class="btn primary" href="gifs.html">Explore GIFs</a>
-          <a class="btn" href="photos.html">Browse Memes</a>
-          <a class="btn" href="sounds.html">Download Sounds</a>
-        </div>
-      </div>
-      <div class="hero-panel">
-        <div class="stat"><strong>3</strong><span>Content types</span></div>
-        <div class="stat"><strong>1 tap</strong><span>Share to WhatsApp</span></div>
-        <div class="stat"><strong>Dark</strong><span>Light mode supported</span></div>
-      </div>
+    <section class="section-head card compact">
+      <h1>Meme Photos</h1>
+      <p>A clean grid of funny meme images made for quick sharing.</p>
     </section>
 
-    <section class="section-head">
-      <h2>Why people love it</h2>
-      <p>A clean layout for quick browsing, downloading, and sharing.</p>
+    <section class="tabbar">
+      <a class="tab" href="gifs.html">GIF Stickers</a>
+      <a class="tab active" href="photos.html">Meme Photos</a>
+      <a class="tab" href="sounds.html">Meme Sounds</a>
     </section>
 
-    <section class="grid features">
-      <article class="card feature"><h3>GIF Stickers</h3><p>Animated reactions and sticker-style memes for chats.</p></article>
-      <article class="card feature"><h3>Meme Photos</h3><p>Funny image posts in a Pinterest-style grid.</p></article>
-      <article class="card feature"><h3>Meme Sounds</h3><p>Audio memes with easy playback and download.</p></article>
-    </section>
+    <section class="grid gallery" id="gallery"></section>
   </main>
 
   <script src="script.js"></script>
+  <script>window.PAGE='photos';</script>
 </body>
 </html>
