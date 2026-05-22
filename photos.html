@@ -8,50 +8,7 @@
 </head>
 
 <body>
-  <!-- photo collection-->
-  <body>
-
-<div class="photo-card">
-
-  <img src="photos/rabbit.jpg" alt="Rabbit">
-
-  <h2>Funny Rabbit</h2>
-
-  <button onclick="likePhoto()" class="like-btn">
-    ❤️ Like
-  </button>
-
-  <a href="photos/rabbit.jpg"
-     download
-     onclick="downloadPhoto()"
-     class="download-btn">
-
-     ⬇ Download
-
-  </a>
-
-</div>
-
-<script>
-
-let likes = localStorage.getItem("likes") || 0;
-let downloads = localStorage.getItem("downloads") || 0;
-
-function likePhoto(){
-
-  likes++;
-
-  localStorage.setItem("likes",likes);
-}
-
-/* DOWNLOAD */
-
-function downloadPhoto(){
-
-  downloads++;
-
-  localStorage.setItem("downloads",downloads);
-}
+  
 
 </script>
 
