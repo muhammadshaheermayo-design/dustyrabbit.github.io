@@ -7,137 +7,70 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DustyRabbit Admin</title>
+<title>Admin Panel</title>
 
-<style>
-
-body{
-
-  background:#111827;
-
-  color:white;
-
-  font-family:Arial;
-
-  padding:40px;
-}
-
-.admin-box{
-
-  background:#1f2937;
-
-  padding:30px;
-
-  border-radius:20px;
-
-  max-width:500px;
-
-  margin:auto;
-}
-
-h1{
-
-  text-align:center;
-
-  color:#f472b6;
-
-  margin-bottom:20px;
-}
-
-input{
-
-  width:100%;
-
-  padding:12px;
-
-  margin-top:15px;
-
-  border:none;
-
-  border-radius:10px;
-}
-
-button{
-
-  width:100%;
-
-  padding:12px;
-
-  margin-top:20px;
-
-  border:none;
-
-  border-radius:10px;
-
-  background:#ec4899;
-
-  color:white;
-
-  font-size:18px;
-
-  cursor:pointer;
-}
-
-.preview{
-
-  margin-top:40px;
-
-  text-align:center;
-}
-
-.preview img{
-
-  width:100%;
-
-  border-radius:20px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="admin-box">
+<section class="hero">
 
 <h1>🐰 Admin Upload</h1>
 
-<input type="file" id="imageInput">
+<p>Add GIFs easily</p>
 
-<input type="text" id="titleInput" placeholder="Photo Title">
+</section>
 
-<button onclick="uploadPhoto()">
-Upload
+<div style="max-width:500px;margin:auto;padding:20px;">
+
+<input
+type="text"
+id="gifTitle"
+placeholder="GIF Title"
+class="input-box">
+
+<input
+type="text"
+id="gifURL"
+placeholder="GIF URL or gifs/file.gif"
+class="input-box">
+
+<button
+class="login-button"
+onclick="addGIF()">
+
+Add GIF
+
 </button>
-
-<div class="preview" id="preview"></div>
 
 </div>
 
 <script>
 
-function uploadPhoto(){
+function addGIF(){
 
-  let file = document.getElementById("imageInput").files[0];
+  let title =
+  document.getElementById("gifTitle").value;
 
-  let title = document.getElementById("titleInput").value;
+  let url =
+  document.getElementById("gifURL").value;
 
-  if(!file){
+  let gifs =
+  JSON.parse(localStorage.getItem("gifs")) || [];
 
-    alert("Select image");
+  gifs.push({
 
-    return;
-  }
+    title:title,
+    url:url
 
-  let imageURL = URL.createObjectURL(file);
+  });
 
-  document.getElementById("preview").innerHTML = `
+  localStorage.setItem("gifs",JSON.stringify(gifs));
 
-    <h2>${title}</h2>
+  alert("GIF Added");
 
-    <img src="${imageURL}">
-
-  `;
 }
 
 </script>
