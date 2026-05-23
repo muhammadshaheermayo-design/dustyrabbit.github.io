@@ -13,6 +13,7 @@ body{
 }
 
 /* HEADER */
+
 header{
   display:flex;
   justify-content:space-between;
@@ -43,19 +44,12 @@ header{
 /* LOGIN BUTTON */
 
 .open-login{
-
   padding:8px 15px;
-
   border:none;
-
   border-radius:10px;
-
   background:#ec4899;
-
   color:white;
-
   cursor:pointer;
-
   font-size:16px;
 }
 
@@ -99,9 +93,11 @@ nav a:hover{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
   padding:40px;
-  max-width:1000px;
+  max-width:1400px;
   margin:auto;
 }
+
+/* CARD */
 
 .card{
   background:rgba(255,255,255,0.05);
@@ -117,19 +113,62 @@ nav a:hover{
   background:rgba(255,255,255,0.1);
 }
 
+/* CARD IMAGE */
+
+.card img,
+.card video{
+  width:100%;
+  border-radius:15px;
+}
+
+/* CARD TITLE */
+
 .card h2{
   color:#f472b6;
+  margin-top:15px;
   margin-bottom:10px;
 }
 
-.card a{
+/* DOWNLOAD BUTTON */
+
+.download-btn{
   display:inline-block;
   margin-top:10px;
-  padding:8px 15px;
+  padding:10px 15px;
   background:#ec4899;
   color:white;
   text-decoration:none;
   border-radius:10px;
+  transition:0.3s;
+}
+
+.download-btn:hover{
+  background:#db2777;
+}
+
+/* LIKE BUTTON */
+
+.like-btn{
+  margin-top:10px;
+  padding:10px 15px;
+  border:none;
+  border-radius:10px;
+  background:#ef4444;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.like-btn:hover{
+  background:#dc2626;
+}
+
+/* COUNTERS */
+
+.counter{
+  margin-top:10px;
+  color:#cbd5e1;
+  font-size:15px;
 }
 
 /* FOOTER */
@@ -148,32 +187,23 @@ footer{
   position:fixed;
   top:0;
   left:0;
-
   width:100vw;
   height:100vh;
-
   background:rgba(0,0,0,0.7);
-
   display:flex;
   justify-content:center;
   align-items:center;
-
   z-index:99999;
 }
 
-/* AGE BOX */
+/* POPUP BOX */
 
 .popup-box{
   width:350px;
-
   background:white;
-
   padding:40px;
-
   border-radius:20px;
-
   text-align:center;
-
   animation:rabbitZoom 1s ease;
 }
 
@@ -184,7 +214,7 @@ footer{
   margin-bottom:20px;
 }
 
-/* TEXT */
+/* POPUP TEXT */
 
 .popup-box h2{
   color:black;
@@ -192,138 +222,93 @@ footer{
   font-size:28px;
 }
 
-/* BUTTON */
+/* POPUP BUTTON */
 
 .popup-box button{
   padding:12px 25px;
-
   border:none;
-
   border-radius:10px;
-
   background:black;
-
   color:white;
-
   font-size:18px;
-
   cursor:pointer;
 }
 
 /* LOGIN POPUP */
 
 .login-popup{
-
   position:fixed;
-
   top:0;
   left:0;
-
   width:100vw;
   height:100vh;
-
   background:rgba(0,0,0,0.7);
-
   display:none;
-
   justify-content:center;
   align-items:center;
-
   z-index:999999;
 }
 
 /* LOGIN BOX */
 
 .login-box{
-
   width:350px;
-
   background:#111827;
-
   padding:40px;
-
   border-radius:20px;
-
   text-align:center;
-
   position:relative;
-
   animation:loginPopup 0.5s ease;
 }
 
 /* CLOSE BUTTON */
 
 .close-btn{
-
   position:absolute;
-
   top:10px;
   right:15px;
-
   background:none;
-
   border:none;
-
   color:white;
-
   font-size:22px;
-
   cursor:pointer;
 }
 
 /* LOGIN RABBIT */
 
 .rabbit-login{
-
   font-size:90px;
-
   margin-bottom:10px;
 }
 
 /* LOGIN TITLE */
 
 .login-box h1{
-
   color:#f472b6;
-
   margin-bottom:20px;
 }
 
-/* INPUTS */
+/* INPUT BOX */
 
 .input-box{
-
   width:100%;
-
   padding:12px;
-
   margin-top:12px;
-
   border:none;
-
   border-radius:10px;
 }
 
 /* LOGIN BUTTON */
 
 .login-button{
-
   width:100%;
-
   margin-top:20px;
-
   padding:12px;
-
   border:none;
-
   border-radius:10px;
-
   background:#ec4899;
-
   color:white;
-
   font-size:18px;
-
   cursor:pointer;
 }
 
@@ -355,6 +340,32 @@ footer{
   100%{
     transform:scale(1);
     opacity:1;
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero h1{
+    font-size:35px;
+  }
+
+  .cards{
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    padding:20px;
   }
 
 }
